@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1>Postings</h1>
+				<p> Welcome to our world</p>
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="current_page_item"><%= link_to "Home", root_path %></li>
+					<li><%= link_to "Sign up/ Sign in", new_post_path %></li>
+					<li><%= link_to "New Post", new_post_path %></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<%= yield %>
+				
+				
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<div id="search" >
+								<form method="get" action="#">
+									<div>
+										<input type="text" name="s" id="search-text" value="" />
+										<input type="submit" id="search-submit" value="GO" />
+									</div>
+								</form>
+							</div>
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						<li>
+							<h2>Kakinada</h2>
+							<p>Kakinada is a city and a municipal corporation in East Godavari district in the Indian state of Andhra Pradesh. It is also the headquarters of East Godavari district.</p>
+						</li>
+						<li>
+							<h2>Inkakinada</h2>
+							<ul>
+								<li><%= link_to 'Movies', "http://www.inkakinada.com/movies" %></li>
+								<li><%= link_to 'Jobs', "http://www.inkakinada.com/jobs" %></li>
+								<li><%= link_to 'Rent', "http://www.inkakinada.com/for-rent" %></li>
+								<li><%= link_to 'Gifts', "http://www.inkakinada.com/gifts" %></li>
+								<li><%= link_to 'Sale', "http://www.inkakinada.com/for-sale" %></li>
+								<li><%= link_to 'Events', "http://www.inkakinada.com/events" %></li>
+							</ul>
+						</li>
+						<li>
+							<h2>Archives</h2>
+							<ul>
+								<li><a href="#">Aliquam libero</a></li>
+								<li><a href="#">Consectetuer adipiscing elit</a></li>
+								<li><a href="#">Metus aliquam pellentesque</a></li>
+								<li><a href="#">Suspendisse iaculis mauris</a></li>
+								<li><a href="#">Urnanet non molestie semper</a></li>
+								<li><a href="#">Proin gravida orci porttitor</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2011 postings.com. All rights reserved. </p>
+</div>
+<!-- end #footer -->
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+
+page.insert_html :bottom, :comments_add, :partial => 'comment', :locals => {:comment => @comment}
+

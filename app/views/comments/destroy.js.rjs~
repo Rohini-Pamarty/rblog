@@ -1,0 +1,5 @@
+
+
+page.replace_html :comments_add, :partial => 'comment', :collection => @post.comments
+
+

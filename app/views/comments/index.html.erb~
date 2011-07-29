@@ -1,0 +1,16 @@
+ <div class="post">
+<h2 class="title"><%= @post.title %></h2>
+</div>
+<% @post.comments.each do |comment| %>
+
+    <div class="post">
+						
+						<p class="meta"><span class="date"><%= comment.created_at.strftime("%b %d, %Y") %> </span><span class="posted">Posted by user</span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+							<p><%= comment.comment %></p>
+							
+						</div>
+		</div>
+<% end %>
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="post">
+						<h2 class="title"><%= @post.title %></h2>
+						<p class="meta"><span class="date"><%= @post.created_at.strftime("%b %d, %Y") %> </span><span class="posted">Posted by Admin <%= @post.post_by %></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+<p><%= @post.body %></p>
+
+<div id="comments_add">
+<%= link_to "View Previous Comments", post_comments_path(@post), :remote => true %> <br /><br />
+</div><br/><br/>
+
+
+							
+						
+	<%= render "comments/form" %><br/>
+<br />
+ 
+<p class="links"><%= link_to "Back", posts_path %> </p>
+</div>
+		</div>

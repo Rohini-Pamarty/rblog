@@ -1,0 +1,1 @@
+page.insert_html :comments_add, :partial => 'comment', :collection => @post.comments

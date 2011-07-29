@@ -1,0 +1,2 @@
+<%= "Sucessfully logged out" %>
+<%= link_to "Back", posts_path %>

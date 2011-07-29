@@ -1,0 +1,27 @@
+<% if user_signed_in? %>
+	<% content_for :script do %>
+		<%  current_user.email %>
+	<% end %>
+<% else %>
+	<% content_for :script do %>
+		<% "WELCOME" %>
+	<% end %>
+<% end %>
+
+
+
+<% @posts.each do |post| %>
+ <div class="post">
+						<h2 class="title"><%= link_to "#{post.title}", post %></h2>
+						<p class="meta"><span class="date"><%= post.created_at.strftime("%b %d, %Y") %> </span><span class="posted">Posted by Admin <%= post.post_by %></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+							<p><%= post.body %></p>
+							<p class="links"><%= link_to "Read More", post %>  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Comments', post_comments_path(:post_id => post.id, :post => post, :method => :get) %>(<%= post.comments.count %>)</p>
+						</div>
+		</div>
+<% end %>
+
+
+
+

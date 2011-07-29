@@ -1,0 +1,3 @@
+dsfsdgdfgasfsdfsdgfds
+dfsdfsdf
+page.insert_html :bottom, :comments_add, :locals => {:post => @post}
