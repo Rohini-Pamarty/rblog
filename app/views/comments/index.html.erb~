@@ -6,7 +6,7 @@
     <div class="post">
 						
 						<p class="meta"><span class="date"><%= comment.created_at.strftime("%b %d, %Y") %> </span><span class="posted">Posted by user</span></p>
-						<div style="clear: both;">&nbsp;</div>
+						<div style="clear: both;">&nbsp;</div><br /> <br />
 						<div class="entry">
 							<p><%= comment.comment %></p>
 							
